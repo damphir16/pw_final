@@ -3,6 +3,7 @@ import Container from "@/UI/container/components/Container";
 import LinkButton from "@/UI/buttons/components/LinkButton";
 import NavBarContainer from "@/UI/container/components/NavBarContainer";
 import {Redressed} from "next/font/google";
+import CartCount from "@/UI/navBar/components/CartCount";
 
 const redressed = Redressed({ subsets: ['latin'], weight: ['400'] });
 
@@ -15,8 +16,8 @@ const NavBar = () => {
                         <LinkButton link = { "/" } text = { "E-Shop" }
                                     className = { `${ redressed.className } font-bold text-2xl` }/>
                         <div>Search Bar component</div>
-                        <div> {/*TO-DO convertir este div en un container component*/ }
-                            <div className = { "hidden md:block" }>Cart component</div>
+                        <div className = { "flex gap-8" }> {/*TO-DO convertir este div en un container component*/ }
+                            <CartCount/>
                             <div>UserMenu component</div>
                         </div>
                     </NavBarContainer>
